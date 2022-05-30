@@ -6,8 +6,6 @@ import { CalendarOutlined } from '@ant-design/icons';
 const { Meta } = Card;
 
 const PostCard = ({ post }) => {
-  console.log(post);
-
   return (
     <Link href={`/posts/${post.slug}`}>
       <Card

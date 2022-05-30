@@ -203,6 +203,7 @@ sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,nextjs,react,yarn
 
+.vscode
 # vercel
 .vercel
 

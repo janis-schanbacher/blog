@@ -21,7 +21,7 @@ const PostWidget = ({ categories, slug }) => {
 
 
   return (
-    <Card title={slug ? "Related Posts" : "Recent Posts"} style={{ margin: '16px 0', position: 'fixed' }}
+    <Card title={slug ? "Related Posts" : "Recent Posts"} style={{ margin: '16px 0', width: '100%' }}
     >
       {relatedPosts.map((post, index) => (
         <>

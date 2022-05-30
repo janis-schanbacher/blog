@@ -30,7 +30,7 @@ const Home: NextPage = ({ posts }) => {
               ))}
             </Col>
             <Col span={8} >{/* Side */}
-              <div>{/* sticky relative */}
+              <div style={{ position: 'fixed' }}>
                 <PostWidget />
                 <Categories />
               </div>

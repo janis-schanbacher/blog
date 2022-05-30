@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Header as HeaderAnt } from 'antd/lib/layout/layout';
 import { Menu } from 'antd';
 import Link from 'next/link';
-
-const categories = [{ name: 'Frontend', slug: 'frontend' }, { name: 'Backend', slug: 'backend' }, { name: 'DevOps', slug: 'devops' }]
+import { getCategories } from '../services';
 
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getCategories()
+      .then((newCategories) => setCategories(newCategories))
+  }, [])
+
   return (
     <HeaderAnt style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
       <div className="logo" style={{
